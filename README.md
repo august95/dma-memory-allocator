@@ -41,17 +41,17 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
       reg = < 0x80000000 0x20000000 >;
     };
 
-  };
-  reserved-driver@0 {
-    compatible = "dmamem";
-    memory-region = < 0x1>;
-  };
+    };
+    reserved-driver@0 {
+      compatible = "dmamem";
+      memory-region = < 0x1>;
+    };
 
  
   open char device in /dev/dmamem
   mmap has been overloaded
  
   if audoprobing is not desired with compatibility string, bind the driver manually:
-    echo dmamem > /sys/bus/platform/devices/0.dmamem/driver_override
-    echo 0.dmamem > /sys/bus/platform/drivers/dmamem/bind
+      echo dmamem > /sys/bus/platform/devices/0.dmamem/driver_override
+      echo 0.dmamem > /sys/bus/platform/drivers/dmamem/bind
 *This is just and example, inspect /sys/ on the specific platform 
