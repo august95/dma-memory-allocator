@@ -3,9 +3,6 @@ dmamem is a linux driver for allocating dma memory in a no-map region, and getti
 The driver has a char device which is accessible through /dev/dmamem after the driver has been probed. 
 The compatibility string is "dmamem". Use mmap after the device has been opened to get the virutal pointer.
 
-
-  allocates DMA buffer on reserved no-map memory region in device-tree
-
   1. add to defconfig:
 
     CONFIG_DMAMEM_DRIVER=y
@@ -48,7 +45,7 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
     };
 
  
-  open char device in /dev/dmamem
+  open char device in /dev/dmamem,
   mmap has been overloaded
  
   if audoprobing is not desired with compatibility string, bind the driver manually:
