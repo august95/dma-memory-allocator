@@ -29,10 +29,10 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
   Device-tree changes:
 
 
-  reserved-memory {
-    #address-cells = < 0x0 >;
-    #size-cells = < 0x0 >;
-    ranges = <>;
+    reserved-memory {
+      #address-cells = < 0x0 >;
+      #size-cells = < 0x0 >;
+      ranges = <>;
 
       bank0@0 {
       no-map;
