@@ -7,9 +7,10 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
   allocates DMA buffer on reserved no-map memory region in device-tree
 
   1. add to defconfig:
+  2. 
   CONFIG_DMAMEM_DRIVER=y
 
-  2. add drivers/dmamem/Kconfig file:
+  3. add drivers/dmamem/Kconfig file:
 
   config DMAMEM_DRIVER
     tristate "DMAMEM Reserved Memory Driver"
@@ -22,9 +23,11 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
   source "drivers/dmamem/Kconfig"
 
   4. add file to drivers/Makefile:
+     
   obj-$(CONFIG_DMAMEM_DRIVER) += dmamem/
 
   Device-tree changes:
+
 
   reserved-memory {
     #address-cells = < 0x0 >;
