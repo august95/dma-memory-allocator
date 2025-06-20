@@ -7,7 +7,7 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
   allocates DMA buffer on reserved no-map memory region in device-tree
 
   1. add to defconfig:
-  2. 
+
   CONFIG_DMAMEM_DRIVER=y
 
   3. add drivers/dmamem/Kconfig file:
