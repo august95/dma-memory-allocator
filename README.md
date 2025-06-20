@@ -8,11 +8,11 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
 
   1. add to defconfig:
 
-  CONFIG_DMAMEM_DRIVER=y
+    CONFIG_DMAMEM_DRIVER=y
 
-  3. add drivers/dmamem/Kconfig file:
+  2. add drivers/dmamem/Kconfig file:
 
-  config DMAMEM_DRIVER
+    config DMAMEM_DRIVER
     tristate "DMAMEM Reserved Memory Driver"
     depends on OF
     help
@@ -20,11 +20,11 @@ The compatibility string is "dmamem". Use mmap after the device has been opened 
 
   3. Source file in drivers/Kconfig:
 
-  source "drivers/dmamem/Kconfig"
+    source "drivers/dmamem/Kconfig"
 
   4. add file to drivers/Makefile:
      
-  obj-$(CONFIG_DMAMEM_DRIVER) += dmamem/
+    obj-$(CONFIG_DMAMEM_DRIVER) += dmamem/
 
   Device-tree changes:
 
